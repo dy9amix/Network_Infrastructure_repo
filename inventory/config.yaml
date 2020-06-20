@@ -1,0 +1,13 @@
+---
+core:
+  num_workers: 100
+
+inventory:
+  plugin: nornir.plugins.inventory.netbox.NBInventory
+  options:
+    nb_url: 'http://35.208.97.187:8000'
+    nb_token: '0123456789abcdef0123456789abcdef01234567'
+    ssl_verify: False
+  transform_function: "scripts.helpers.adapt_user_password"
+  
+
