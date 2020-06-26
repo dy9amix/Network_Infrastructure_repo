@@ -1,0 +1,16 @@
+{% for n in interface %}
+{% if 'Loopback' in n.name %}
+interface {{n.name}}
+ ip address {{n.ip_addr}} {{n.mask}}
+ no shutdown
+{% else %}
+interface {{n.name}}
+ ip address {{n.ip_addr}} {{n.mask}}
+ no shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+ no cdp enable
+{% endif %}
+{% endfor %}
+ 

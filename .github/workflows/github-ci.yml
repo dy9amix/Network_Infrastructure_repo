@@ -7,12 +7,11 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Deploy_to_prod:
+  Deploy_to_Test_Network:
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -20,16 +19,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Validate
-      run: |
-        python3 -m pylint config_man.py
-        python3 -m pylint config_backup.py
-    
+        
     # Runs a set of commands using the runners shell
-    - name: Deploy to production
-      run: python3 config_man.py
+    - name: Deploy to Test Network
+      run: python3 test_deploy.py
     
     - name: Configuration backup
-      run: python3 config_backup.py
+      run: python3 backup_config.py
