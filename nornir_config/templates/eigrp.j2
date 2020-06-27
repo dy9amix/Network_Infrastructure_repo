@@ -1,0 +1,4 @@
+router eigrp 1
+{% for n in interface %}
+ network {{n.ip_addr}} {{n.wildcard}}
+{% endfor %}

@@ -2,13 +2,17 @@
 interface:
     - name: GigabitEthernet0/0
       ip_addr: 192.168.56.5
+      net_addr: 192.168.56.0
       mask: 255.255.255.0
     - name: GigabitEthernet0/1
       ip_addr: 192.168.57.1
+      net_addr: 192.168.56.0
       mask: 255.255.255.0
     - name: GigabitEthernet0/2
       ip_addr: 192.168.45.5
+      net_addr: 192.168.56.0
       mask: 255.255.255.0
     - name: Loopback0
       ip_addr: 5.5.5.5
+      net_addr: 5.5.5.0
       mask: 255.255.255.0

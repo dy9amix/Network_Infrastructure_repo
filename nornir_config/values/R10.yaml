@@ -3,9 +3,15 @@ interface:
     - name: GigabitEthernet0/0
       ip_addr: 192.168.109.10
       mask: 255.255.255.0
+      wildcard: 0.0.0.255
+      area: 64915
     - name: GigabitEthernet0/1
       ip_addr: 192.168.120.10
       mask: 255.255.255.0
+      wildcard: 0.0.0.255
+      area: 64915
     - name: Loopback0
       ip_addr: 10.10.10.10
       mask: 255.255.255.0
+      wildcard: 0.0.0.255
+      area: 64915
