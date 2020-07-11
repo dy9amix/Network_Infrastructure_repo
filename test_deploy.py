@@ -3,8 +3,10 @@ from nornir_config.interfaces_config import load_data
 from nornir_config.ospf_config import configure_ospf
 from nornir_config.rip_config import configure_rip
 from nornir_config.eigrp_config import configure_eigrp
+from nornir_config.netbox_conf import update_netbox_interface, nb_interfaces
 from nornir.plugins.functions.text import print_result
 from nornir.core.filter import F
+
 
 nr = InitNornir("./config.yaml")
 
@@ -22,6 +24,11 @@ def route():
     eigrp_device = nr.filter(F(name="R6")|F(name="R7")|F(name="R8")|F(name="R8"))  
     r_eigrp = eigrp_device.run(task=configure_eigrp)
     print_result(r_eigrp)
+
+def updateNetboxInterfaces():
+    netboxUpdate = nr.run(nb_interfaces=nb_interfaces,task = update_netbox_interface)
+    print_result(netboxUpdate)
+
 
 if __name__ == "__main__":
     route()

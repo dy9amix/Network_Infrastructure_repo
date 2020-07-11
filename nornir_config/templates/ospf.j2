@@ -1,9 +1,9 @@
 router ospf 1
 {% for n in interface %}
-{% if 'Loopback' in interface.name %}
+{% if 'Loopback0' in n.name %}
  router-id {{n.ip_addr}}
-{% endif %}
-{% endfor %}
-{% for n in interface %}
  network {{n.ip_addr}} {{n.wildcard}} area {{n.area}}
+{% else %}
+ network {{n.ip_addr}} {{n.wildcard}} area {{n.area}}
+{% endif %}
 {% endfor %}

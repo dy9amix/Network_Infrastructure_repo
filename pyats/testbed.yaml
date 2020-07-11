@@ -1,0 +1,172 @@
+devices:
+  dummy:
+    # im no dummy
+    alias: uut
+    os: iosxe
+    type: NOT REAL
+    connections:
+      defaults:
+        class: unicon.Unicon
+      ssh:
+        ip: 1.1.1.1
+        protocol: ssh
+    custom:
+      abstraction:
+        order: [os, type]
+  R1:
+    alias: R1
+    connections:
+      cli:
+        ip: 192.168.1.101
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R10:
+    alias: R10
+    connections:
+      cli:
+        ip: 192.168.1.10
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R11:
+    alias: R11
+    connections:
+      cli:
+        ip: 192.168.1.11
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R12:
+    alias: R12
+    connections:
+      cli:
+        ip: 192.168.1.12
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R2:
+    alias: R2
+    connections:
+      cli:
+        ip: 192.168.1.2
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R3:
+    alias: R3
+    connections:
+      cli:
+        ip: 192.168.1.3
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R4:
+    alias: R4
+    connections:
+      cli:
+        ip: 192.168.1.4
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R5:
+    alias: R5
+    connections:
+      cli:
+        ip: 192.168.1.5
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R6:
+    alias: R6
+    connections:
+      cli:
+        ip: 192.168.1.6
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R7:
+    alias: R7
+    connections:
+      cli:
+        ip: 192.168.1.7
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R8:
+    alias: R8
+    connections:
+      cli:
+        ip: 192.168.1.8
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+  R9:
+    alias: R9
+    connections:
+      cli:
+        ip: 192.168.1.9
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: Router
+topology: {}
