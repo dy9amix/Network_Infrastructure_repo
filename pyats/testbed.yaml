@@ -1,20 +1,6 @@
 devices:
-  dummy:
-    # im no dummy
-    alias: uut
-    os: iosxe
-    type: NOT REAL
-    connections:
-      defaults:
-        class: unicon.Unicon
-      ssh:
-        ip: 1.1.1.1
-        protocol: ssh
-    custom:
-      abstraction:
-        order: [os, type]
   R1:
-    alias: R1
+    alias: uut
     connections:
       cli:
         ip: 192.168.1.101

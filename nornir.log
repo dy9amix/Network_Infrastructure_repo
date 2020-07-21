@@ -12643,3 +12643,124 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: <function template_file at 0
 2020-07-09 10:13:44,740 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 6 hosts
 2020-07-09 10:14:44,658 -  nornir.core -     INFO -        run() - Running task 'configure_rip' with args {} on 2 hosts
 2020-07-09 10:15:26,570 -  nornir.core -     INFO -        run() - Running task 'configure_eigrp' with args {} on 3 hosts
+2020-07-15 14:35:48,773 -  nornir.core -     INFO -        run() - Running task 'validate_interfaces' with args {} on 12 hosts
+2020-07-15 14:35:53,295 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,031 - nornir.core.task -    ERROR -      start() - Host 'R5': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,054 - nornir.core.task -    ERROR -      start() - Host 'R12': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,307 - nornir.core.task -    ERROR -      start() - Host 'R9': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,351 - nornir.core.task -    ERROR -      start() - Host 'R10': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,440 - nornir.core.task -    ERROR -      start() - Host 'R6': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,574 - nornir.core.task -    ERROR -      start() - Host 'R8': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,681 - nornir.core.task -    ERROR -      start() - Host 'R11': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,742 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,767 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,784 - nornir.core.task -    ERROR -      start() - Host 'R7': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
+2020-07-15 14:35:54,826 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'validate_interfaces' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/home/projects/Network_Infrastructure_repo/pyats/validate_configs.py", line 10, in validate_interfaces
+    gRun(devices=f"{task.host}", verification_uids=["Verify_IpInterface","Verify_IpInterfaceBrief"])
+  File "src/genie/harness/main.py", line 1331, in genie.harness.main.gRun
+  File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
+RuntimeError: Cannot start a task when no job is running.
+
