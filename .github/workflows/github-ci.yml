@@ -26,3 +26,18 @@ jobs:
     
     - name: Configuration backup
       run: python3 backup_config.py
+
+    - name: Verify Configurations with pyats harness
+      run: easypy verifications.py
+      
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@2.1.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: segun
+
