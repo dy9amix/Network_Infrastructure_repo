@@ -1,0 +1,16 @@
+devices:
+  R6:
+    alias: uut
+    connections:
+      defaults:
+        class: 'unicon.Unicon'
+      a:
+        protocol: ssh
+        ip: 192.168.1.6
+    credentials:
+      default:
+        password: admin
+        username: admin
+    os: ios
+    platform: ios
+    type: IOSv

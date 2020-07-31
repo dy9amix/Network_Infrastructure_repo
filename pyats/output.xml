@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.2 on linux)" generated="20200713 16:11:08.136" rpa="false">
-<suite id="s1" name="Validate" source="/home/projects/Network_Infrastructure_repo/pyats/validate.robot">
-<test id="s1-t1" name="Validate Ospf">
-<kw name="Run verification &quot;ospf&quot; on deivce &quot;R1&quot; using alias &quot;R1&quot;">
-<msg timestamp="20200713 16:11:09.201" level="FAIL">No keyword with name 'Run verification "ospf" on deivce "R1" using alias "R1"' found.</msg>
-<status status="FAIL" starttime="20200713 16:11:09.201" endtime="20200713 16:11:09.201"></status>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on linux)" generated="20200721 14:23:09.201" rpa="false">
+<suite id="s1" name="Validate" source="/home/segunorodeji_gmail_com/Projects/Network_Infrastructure_repo/pyats/validate.robot">
+<test id="s1-t1" name="Connect">
+<kw name="use genie testbed &quot;${testbed}&quot;" library="genie.libs.robot.GenieRobot">
+<doc>Create the genie testbed</doc>
+<msg timestamp="20200721 14:23:10.285" level="INFO">+------------------------------------------------------------------------------+
+|                            Genie datafiles used:                             |
++------------------------------------------------------------------------------+</msg>
+<msg timestamp="20200721 14:23:10.285" level="INFO">Trigger datafile          | /usr/local/lib/python3.8/dist-packages/genie/libs/sdk/genie_yamls/nxos/trigger_datafile_nxos.yaml</msg>
+<msg timestamp="20200721 14:23:10.285" level="INFO">Verification  datafile    | /usr/local/lib/python3.8/dist-packages/genie/libs/sdk/genie_yamls/nxos/verification_datafile_nxos.yaml</msg>
+<msg timestamp="20200721 14:23:10.285" level="INFO">Pts datafile              | /usr/local/lib/python3.8/dist-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
+<msg timestamp="20200721 14:23:10.285" level="INFO">Subsection datafile       | /usr/local/lib/python3.8/dist-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
+<msg timestamp="20200721 14:23:10.286" level="INFO">Config datafile           | None</msg>
+<status status="PASS" starttime="20200721 14:23:10.212" endtime="20200721 14:23:11.941"></status>
 </kw>
-<status status="FAIL" starttime="20200713 16:11:09.197" endtime="20200713 16:11:09.201" critical="yes">No keyword with name 'Run verification "ospf" on deivce "R1" using alias "R1"' found.</status>
+<kw name="connect to devices &quot;R1&quot;" library="ats.robot.pyATSRobot">
+<doc>Connect to devices via connection as defined in testbed.yaml.
+Specify devices with semi-colon separated list, e.g. "R1;R2"</doc>
+<msg timestamp="20200721 14:23:11.942" level="INFO">Connecting to device 'Device R1, type Router'</msg>
+<msg timestamp="20200721 14:23:11.942" level="INFO">kwargs: {}</msg>
+<msg timestamp="20200721 14:23:13.519" level="INFO">2020-07-21 14:23:11,944: %UNICON-INFO: +++ R1 logfile /tmp/R1-cli-20200721T142311943.log +++
+
+2020-07-21 14:23:11,944: %UNICON-INFO: +++ Unicon plugin ios +++
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+
+2020-07-21 14:23:12,326: %UNICON-INFO: +++ connection to spawn: ssh -l admin 192.168.1.101, id: 139926750610096 +++
+
+2020-07-21 14:23:12,326: %UNICON-INFO: connection to R1
+Password: 
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#
+
+2020-07-21 14:23:12,415: %UNICON-INFO: +++ initializing handle +++
+
+2020-07-21 14:23:12,416: %UNICON-INFO: +++ R1: executing command 'term length 0' +++
+term length 0
+R1#
+
+2020-07-21 14:23:12,584: %UNICON-INFO: +++ R1: executing command 'term width 0' +++
+term width 0
+R1#
+
+2020-07-21 14:23:12,759: %UNICON-INFO: +++ R1: executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.6(2)T, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 22-Mar-16 16:19 by prod_rel_team
+
+
+ROM: Bootstrap program is IOSv
+
+R1 uptime is 17 hours, 36 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 460009K/62464K bytes of memory.
+Processor board ID 94QDMNC2VSK4ZDO4AMHXP
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+1024K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R1#
+
+2020-07-21 14:23:12,931: %UNICON-INFO: +++ R1: config +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#no logging console
+R1(config)#line console 0
+R1(config-line)#exec-timeout 0
+R1(config-line)#end
+R1#
+
+2020-07-21 14:23:13,434: %UNICON-INFO: +++ R1: executing command '' +++
+
+R1#</msg>
+<status status="PASS" starttime="20200721 14:23:11.941" endtime="20200721 14:23:13.520"></status>
+</kw>
+<status status="PASS" starttime="20200721 14:23:10.211" endtime="20200721 14:23:13.521" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200713 16:11:08.137" endtime="20200713 16:11:09.202"></status>
+<test id="s1-t2" name="verify Interfaces">
+<kw name="run verification &quot;Verify&quot; on device &quot;R1&quot;" library="genie.libs.robot.GenieRobot">
+<doc>Call any verification defined in the verification datafile
+on device</doc>
+<msg timestamp="20200721 14:23:13.538" level="FAIL">Could not find 'Verify'</msg>
+<status status="FAIL" starttime="20200721 14:23:13.522" endtime="20200721 14:23:13.538"></status>
+</kw>
+<status status="FAIL" starttime="20200721 14:23:13.521" endtime="20200721 14:23:13.539" critical="yes">Could not find 'Verify'</status>
+</test>
+<status status="FAIL" starttime="20200721 14:23:09.203" endtime="20200721 14:23:13.540"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="Validate">Validate</stat>
+<stat pass="1" fail="1" id="s1" name="Validate">Validate</stat>
 </suite>
 </statistics>
 <errors>

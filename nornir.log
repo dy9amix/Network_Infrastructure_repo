@@ -12764,3 +12764,10 @@ Traceback (most recent call last):
   File "src/pyats/easypy/tasks.py", line 229, in pyats.easypy.tasks.Task.__init__
 RuntimeError: Cannot start a task when no job is running.
 
+2020-07-31 18:35:12,601 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 1 hosts
+2020-07-31 18:38:38,420 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 1 hosts
+2020-07-31 19:00:44,384 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 1 hosts
+2020-07-31 19:07:18,084 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 1 hosts
+2020-07-31 19:24:34,576 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 12 hosts
+2020-07-31 19:25:11,477 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 12 hosts
+2020-07-31 19:25:48,246 -  nornir.core -     INFO -        run() - Running task 'main' with args {} on 6 hosts

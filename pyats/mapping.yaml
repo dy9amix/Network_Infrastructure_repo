@@ -1,0 +1,8 @@
+devices:
+    R2:
+     context: cli
+     label: uut
+     mapping:
+        cli:
+        protocol: ssh
+        

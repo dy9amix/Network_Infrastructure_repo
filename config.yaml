@@ -5,7 +5,7 @@ core:
 inventory:
   plugin: nornir.plugins.inventory.netbox.NBInventory
   options:
-    nb_url: 'http://35.208.97.187:8000'
+    nb_url: 'http://35.208.97.187:9000'
     nb_token: 'ac072a2c5733b55af66b27a4cb8179a7f314a9c7'
     ssl_verify: False
   transform_function: 'inventory_script.helpers.adapt_user_password'

@@ -54,16 +54,18 @@ devices:
   R2:
     alias: R2
     connections:
-      cli:
-        ip: 192.168.1.2
+      defaults:
+        class: 'unicon.Unicon'
+      a:
         protocol: ssh
+        ip: 192.168.1.2 
     credentials:
       default:
         password: admin
         username: admin
     os: ios
     platform: ios
-    type: Router
+    type: IOSv
   R3:
     alias: R3
     connections:
@@ -155,4 +157,11 @@ devices:
     os: ios
     platform: ios
     type: Router
-topology: {}
+topology:
+  R2:
+    interfaces:
+      GigabitEthernet3:
+        ipv4: 192.168.1.2/24
+        link: flat
+        type: ethernet
+ 
